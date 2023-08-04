@@ -30,3 +30,38 @@ public class MergeSortTests
         }
     }
 }
+
+// using Class Fixture
+public class MergeSortTests_ : IClassFixture<DataShare>
+{
+    public DataShare _dataShare; 
+
+    public MergeSortTests_(DataShare dataShare)
+    {
+        _dataShare = dataShare;
+    }
+
+    // Test to check if an array is sorted
+    [Fact]
+    public void CheckIfSorted()
+    {
+        MergeSort mergeSort = new MergeSort();
+
+        foreach(int[] arr in _dataShare.SortInput)
+        {
+
+            mergeSort.MergeSort_(arr, 0, arr.Length);
+
+            int? prev = null;
+            foreach (var item in arr)
+            {
+                if (prev != null)
+                {
+                    Assert.True(prev <= item);
+                }
+
+                prev = item;
+            }
+        }
+    }
+}
