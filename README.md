@@ -12,7 +12,7 @@ dotnet test
 Run a specific test
 
 ```
-dotnet test --filter  "FullyQualifiedName=CheckSorted.CheckIfSorted"
+dotnet test --filter  "FullyQualifiedName=UnitTests.Tests.CheckSorted.CheckPositive"
 ```
 
 ## Donations
