@@ -12,9 +12,9 @@ public class MergeSortTests
     [InlineData(new int[] { 1, 6, 24, 97 })]
     public void CheckIfSorted(int[] arr)
     {
-        MergeSort mergeSort = new MergeSort();
+        MergeSort mergeSort = new MergeSort(arr);
 
-        mergeSort.MergeSort_(arr, 0, arr.Length);
+        // mergeSort.MergeSort_(arr, 0, arr.Length);
 
         Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
     }
@@ -23,9 +23,9 @@ public class MergeSortTests
     [MemberData(nameof(SortingTestsData.integerNos), MemberType = typeof(SortingTestsData))]
     public void CheckIfSorted_(int no, int[] arr)
     {
-        MergeSort mergeSort = new MergeSort();
+        MergeSort mergeSort = new MergeSort(arr);
 
-        mergeSort.MergeSort_(arr, 0, arr.Length);
+        // mergeSort.MergeSort_(arr, 0, arr.Length);
 
         Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
     }
@@ -46,11 +46,11 @@ public class MergeSortTests_ : IClassFixture<DataShare>
     [Fact]
     public void CheckIfSorted()
     {
-        MergeSort mergeSort = new MergeSort();
 
         foreach(int[] arr in _dataShare.SortInput)
         {
-            mergeSort.MergeSort_(arr, 0, arr.Length);
+            MergeSort mergeSort = new MergeSort(arr);
+            // mergeSort.MergeSort_(arr, 0, arr.Length);
 
             Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
         }

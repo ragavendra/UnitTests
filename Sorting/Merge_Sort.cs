@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UnitTests;
 
-public class MergeSort
+public class Merge_Sort
 {
 	public void MergeSort_(int[] den, int first, int last)
 	{
