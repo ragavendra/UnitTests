@@ -1,12 +1,12 @@
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
-using Csharp;
+using UnitTests;
 
 // var arr_ = new int[] { 98, 87, 75, 66, 55, 33 };
 public class SortingRunner
 {
-    public static void Main()
+    public static void Main_()
     {
         var rnd = new Random();
         var arr_ = new int[] { rnd.Next(100), rnd.Next(100), rnd.Next(100), rnd.Next(100), rnd.Next(100), rnd.Next(100), rnd.Next(100) };

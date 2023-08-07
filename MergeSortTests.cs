@@ -1,7 +1,5 @@
 using Xunit;
-using System;
-using System.Collections.Generic;
-
+using UnitTests.Helpers;
 namespace UnitTests;
 
 public class MergeSortTests
@@ -18,16 +16,18 @@ public class MergeSortTests
 
         mergeSort.MergeSort_(arr, 0, arr.Length);
 
-        int? prev = null;
-        foreach (var item in arr)
-        {
-            if (prev != null)
-            {
-                Assert.True(prev <= item);
-            }
+        Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
+    }
 
-            prev = item;
-        }
+    [Theory]
+    [MemberData(nameof(SortingTestsData.integerNos), MemberType = typeof(SortingTestsData))]
+    public void CheckIfSorted_(int no, int[] arr)
+    {
+        MergeSort mergeSort = new MergeSort();
+
+        mergeSort.MergeSort_(arr, 0, arr.Length);
+
+        Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
     }
 }
 
@@ -50,19 +50,9 @@ public class MergeSortTests_ : IClassFixture<DataShare>
 
         foreach(int[] arr in _dataShare.SortInput)
         {
-
             mergeSort.MergeSort_(arr, 0, arr.Length);
 
-            int? prev = null;
-            foreach (var item in arr)
-            {
-                if (prev != null)
-                {
-                    Assert.True(prev <= item);
-                }
-
-                prev = item;
-            }
+            Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
         }
     }
 }

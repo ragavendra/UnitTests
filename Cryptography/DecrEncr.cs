@@ -14,7 +14,7 @@ public class DecrEncr
 
     private static byte[] _iv;
 
-    public static void Main()
+    public static void Main_()
     {
         // EncryptFile(AppContext.BaseDirectory + "sample.txt");
 

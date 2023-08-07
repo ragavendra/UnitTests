@@ -9,8 +9,8 @@ public class DataShare
 
     public int[][] _sortInput = new int[][] 
                                 {
-                                    new int[] { 3, 8, 21, 98 },
-                                    new int[] { 1, 6, 24, 97 }
+                                    new int[] { new Random().Next(100), new Random().Next(100), new Random().Next(100), new Random().Next(100) },
+                                    new int[] { new Random().Next(100), new Random().Next(100), new Random().Next(100), new Random().Next(100) }
                                 };
 
     public int[][] SortInput { get => _sortInput; }

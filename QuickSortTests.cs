@@ -1,8 +1,24 @@
 using Xunit;
-using System;
-using System.Collections.Generic;
-
+using UnitTests.Helpers;
 namespace UnitTests;
+
+public class QuickSortTests_
+{
+    // Test to check if an array is sorted
+    [Theory]
+    // [InlineData(_arr)]
+    [InlineData(new int[] { 3, 8, 21, 98 })]
+    [InlineData(new int[] { 1, 6, 24, 97 })]
+    public void CheckIfSorted(int[] arr)
+    {
+        QuickSort quickSort = new QuickSort();
+
+        quickSort.QuickSort_(arr, 0, arr.Length - 1);
+
+        Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
+    }
+}
+
 
 // using Class Fixture
 public class QuickSortTests : IClassFixture<DataShare>
@@ -25,16 +41,7 @@ public class QuickSortTests : IClassFixture<DataShare>
         {
             quickSort.QuickSort_(arr, 0, arr.Length - 1);
 
-            int? prev = null;
-            foreach (var item in arr)
-            {
-                if (prev != null)
-                {
-                    Assert.True(prev <= item);
-                }
-
-                prev = item;
-            }
+            Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
         }
     }
 }

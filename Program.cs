@@ -2,9 +2,13 @@ using System;
 using System.Text;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using UnitTests;
+
+// MergeSortTests_ mergeSortTests_ = new MergeSortTests_();
+// MergeSortTests_.CheckSorted();
 
 // namespace Csharp
-{
+// {
 
 // var arr_ = new int[] { 98, 87, 75, 66, 55, 33 };
 
@@ -21,6 +25,6 @@ decrEncr.EncryptFile("sample.txt");
 
 decrEncr.DecryptFile("sample.txt");*/
 
-SortingRunner.Main();
+// SortingRunner.Main();
 
-}
+// }

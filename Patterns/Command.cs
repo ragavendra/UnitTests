@@ -119,7 +119,7 @@ public class Remote
 
 public partial class Program
 {
-    public static void Main()
+    public static void Main_1_()
     {
         IControls controls = new Controls();
         var remote = new Remote(controls);
