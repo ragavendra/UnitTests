@@ -2,7 +2,7 @@ using System.Collections;
 using System;
 using Xunit;
 
-namespace UnitTests;
+namespace UnitTests.Mathe;
 
 	public static class NthRoot{
 
@@ -30,7 +30,7 @@ namespace UnitTests;
 			//Console.WriteLine((Math.Log(number, x)/n));
 
 			for(int i = 0; i < number/2; i++)
-				if((Math.Log(number, i)/n) == 1.0000)
+				if((System.Math.Log(number, i)/n) == 1.0000)
 					return i;
 
 			return 0;

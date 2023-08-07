@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
-using UnitTests;
+namespace UnitTests.Sorting;
 
 // var arr_ = new int[] { 98, 87, 75, 66, 55, 33 };
 public class SortingRunner

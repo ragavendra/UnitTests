@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Xunit;
 
-namespace UnitTests;
+namespace UnitTests.Mathe;
 
 public static class PrimeNoGen
 {

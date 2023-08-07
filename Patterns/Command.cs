@@ -1,4 +1,5 @@
 using System;
+namespace UnitTests.Patterns;
 
 public class Controls : IControls
 {

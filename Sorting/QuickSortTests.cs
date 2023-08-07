@@ -1,6 +1,6 @@
 using Xunit;
 using UnitTests.Helpers;
-namespace UnitTests;
+namespace UnitTests.Sorting;
 
 public class QuickSortTests_
 {
@@ -10,6 +10,17 @@ public class QuickSortTests_
     [InlineData(new int[] { 3, 8, 21, 98 })]
     [InlineData(new int[] { 1, 6, 24, 97 })]
     public void CheckIfSorted(int[] arr)
+    {
+        QuickSort quickSort = new QuickSort();
+
+        quickSort.QuickSort_(arr, 0, arr.Length - 1);
+
+        Assert.True(SortingHelper.CheckSorted(arr), "array is not sorted!");
+    }
+    
+    [Theory]
+    [MemberData(nameof(SortingTestsData.integerNos), MemberType = typeof(SortingTestsData))]
+    public void CheckIfSorted_(int no, int[] arr)
     {
         QuickSort quickSort = new QuickSort();
 

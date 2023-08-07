@@ -1,4 +1,5 @@
 using System;
+namespace UnitTests.Mathe;
 					
 public class Progr
 {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UnitTests;
+namespace UnitTests.Sorting;
 
 public class Merge_Sort
 {

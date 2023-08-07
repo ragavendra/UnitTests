@@ -1,5 +1,5 @@
 using System;
-
+namespace UnitTests.Patterns;
 
 public partial class Program
 {

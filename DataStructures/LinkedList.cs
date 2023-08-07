@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using System;
-namespace UnitTests;
+namespace UnitTests.DataStructures;
 
 public static class Tsil
 {

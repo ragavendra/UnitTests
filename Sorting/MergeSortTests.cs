@@ -1,6 +1,6 @@
 using Xunit;
 using UnitTests.Helpers;
-namespace UnitTests;
+namespace UnitTests.Sorting;
 
 public class MergeSortTests
 {

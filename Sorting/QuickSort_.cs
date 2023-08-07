@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using System;
+namespace UnitTests.Sorting;
 
     public class QuickSort_
    {

@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Security.Cryptography;
+namespace UnitTests.Cryptography;
 
 // namespace Csharp
 public class DecrEncr
