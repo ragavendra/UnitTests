@@ -1,5 +1,10 @@
 ## UnitTests
-Repos having common tests for testing for different cases like check if an array is sorted. Check if a number is even and so on.
+Repos having common tests for testing for different cases like to check if an array is sorted. Check if a number is even and so on.
+
+This repository helps in building functionality based on `Test driven development` , essentially one may not want to write say `sorting` method each time it is needed as there are chances are high that it may not be successful in edge cases. In such cases it is wise enough to have one method with all the data permutations needed to test it.
+
+### Conventions
+The methods will be contained in `Class.cs` file and its test(s) in the `ClassTests.cs` file like say `MergeSort.cs` will have its test in `MergeSortTests.cs` file.
 
 ### CLI
 
