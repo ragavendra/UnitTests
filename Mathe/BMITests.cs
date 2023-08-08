@@ -15,6 +15,8 @@ public class BMITests
     }
 }
 
+// Please refer to https://en.wikipedia.org/wiki/Body_mass_index#/media/File:BMI_chart.png on how I am setting the range.
+// An adult's height is constant say 1.9m, s his overweight range is from 92 to 108 kgs.
 public class BmiTestsData
 {
     // height in cms and weight in grams
@@ -23,7 +25,10 @@ public class BmiTestsData
         new object[] { 179, 69_000, 0, Scale.Normal },
         new object[] { 179, 55_000, 0, Scale.UnderWeight },
         new object[] { 179, 89_000, 0, Scale.OverWeight },
-        new object[] { 179, 109_000, 0, Scale.Obese }
+        new object[] { 179, 109_000, 0, Scale.Obese },
         // new object[] { new Random().Next(141, 200), new Random().Next(35, 132), 0, Scale.Obese }
+        new object[] { 150, new Random().Next(46, 52) * 1000, 0, Scale.Normal },
+        new object[] { 190, new Random().Next(68, 90) * 1000, 0, Scale.Normal },
+        new object[] { 190, new Random().Next(92, 108) * 1000, 0, Scale.OverWeight }
     };
 }

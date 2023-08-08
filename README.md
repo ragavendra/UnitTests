@@ -3,6 +3,8 @@ Repos having common tests for testing for different cases like to check if an ar
 
 This repository helps in building functionality based on `Test driven development` , essentially one may not want to write say `sorting` method each time it is needed as there are chances are high that it may not be successful in edge cases. In such cases it is wise enough to have one method with all the data permutations needed to test it.
 
+Please refer to [BMITests](Sorting/BMITests) for a valid example showing the test data is generated in a range dynamically to test the BMI method. 
+
 ### Conventions
 The methods will be contained in `Class.cs` file and its test(s) in the `ClassTests.cs` file like say `MergeSort.cs` will have its test in `MergeSortTests.cs` file.
 
