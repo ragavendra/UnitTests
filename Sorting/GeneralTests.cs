@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Sockets;
+using System.Threading;
 namespace UnitTests.Sorting;
 
 public class GeneralTests
@@ -60,5 +61,35 @@ public class GeneralTests
     private void PrintLine()
     {
         Console.WriteLine("Line write");
+    }
+
+    [Fact]
+    public void CheckTask()
+    {
+        Task task = new Task(SomeTask);
+        task.Start();
+        Console.WriteLine("Out of task now");
+    }
+
+    private void SomeTask()
+    {
+        Task.Delay(TimeSpan.FromSeconds(6));
+        Console.WriteLine("In task now");
+    }
+
+    [Fact]
+    public void CheckTask_()
+    {
+        SomeTask_();
+        Console.WriteLine("Out of task now");
+    }
+
+    private async void SomeTask_()
+    {
+        // no await, task will run async
+        await Task.Delay(TimeSpan.FromSeconds(6));
+
+        // Thread.Sleep(TimeSpan.FromSeconds(6));
+        Console.WriteLine("In async task now");
     }
 }
